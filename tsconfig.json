@@ -1,0 +1,51 @@
+{
+	"compilerOptions": {
+		/* Basic Options */
+		"target": "esnext",
+		"module": "esnext",
+		"allowJs": false,
+		"jsx": "react",
+		"declaration": false,
+		"sourceMap": true,
+		// "outFile": "./",
+		"outDir": "./out",
+		"rootDir": "./src",
+		"removeComments": true,
+		"noEmit": false,
+		/* Strict Type-Checking Options */
+		"strict": true,
+		"noImplicitAny": true,
+		"strictNullChecks": true,
+		"strictFunctionTypes": true,
+		"strictBindCallApply": true,
+		"strictPropertyInitialization": true,
+		"noImplicitThis": true,
+		"alwaysStrict": true,
+		/* Additional Checks */
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		/* Module Resolution Options */
+		"moduleResolution": "node",
+		// "baseUrl": "./",
+		// "paths": {},
+		// "rootDirs": [],
+		// "typeRoots": [],
+		// "types": [],
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		// "preserveSymlinks": true,
+		/* Source Map Options */
+		"sourceRoot": "src",
+		// "mapRoot": "",
+		"inlineSourceMap": false,
+		"inlineSources": false,
+		/* Experimental Options */
+		"experimentalDecorators": false,
+		"emitDecoratorMetadata": false,
+	},
+	"include": [
+		"src/**/*",
+	],
+}
