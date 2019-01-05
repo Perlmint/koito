@@ -3,8 +3,65 @@
 	<head>
 		<!--Prevent loading favicon-->
 		<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+		<!--CSS Loading inspector-->
+		<style>
+			html, body, #app {
+				width: 100%;
+				height: 100%;
+			}
+			body {
+				margin: 0;
+			}
+			.loading-inspector {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 100%;
+			}
+			.lds-facebook {
+				display: inline-block;
+				position: relative;
+				width: 64px;
+				height: 64px;
+			}
+			.lds-facebook div {
+				display: inline-block;
+				position: absolute;
+				left: 6px;
+				width: 13px;
+				background: rgb(0, 0, 0);
+				animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+			}
+			.lds-facebook div:nth-child(1) {
+				left: 6px;
+				animation-delay: -0.24s;
+			}
+			.lds-facebook div:nth-child(2) {
+				left: 26px;
+				animation-delay: -0.12s;
+			}
+			.lds-facebook div:nth-child(3) {
+				left: 45px;
+				animation-delay: 0;
+			}
+			@keyframes lds-facebook {
+				0% {
+					top: 6px;
+					height: 51px;
+				}
+				50%, 100% {
+					top: 19px;
+					height: 26px;
+				}
+			}
+		</style>
 	</head>
 	<body>
-		<div id="app"></div>
+		<div id="app">
+			<!--Loading inspector-->
+			<div class="loading-inspector">
+				<div class="lds-facebook"><div></div><div></div><div></div></div>
+			</div>
+		</div>
 	</body>
 </html>
