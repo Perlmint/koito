@@ -1,10 +1,9 @@
-import { applyMiddleware, createStore } from "redux";
+import { applyMiddleware, combineReducers, createStore } from "redux";
 import thunk from "redux-thunk";
+import accountReducer from "./account";
 
-function emptyReducer(state: any = {}) {
-	return state;
-}
-
-const store = createStore(emptyReducer, applyMiddleware(thunk));
+const store = createStore(combineReducers({
+	accounts: accountReducer,
+}), applyMiddleware(thunk));
 
 export default store;
