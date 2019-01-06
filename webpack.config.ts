@@ -7,6 +7,9 @@ const devMode = process.env.NODE_ENV !== "production";
 
 export default function() {
 	return {
+		devServer: {
+			historyApiFallback: true,
+		},
 		devtool: "source-map",
 		entry: path.join(__dirname, "src", "index.tsx"),
 		mode: devMode ? "development" : "production",
@@ -31,6 +34,7 @@ export default function() {
 		},
 		output: {
 			path: path.join(__dirname, "out"),
+			publicPath: "/",
 		},
 		plugins: [
 			new HtmlPlugin({
