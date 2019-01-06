@@ -1,11 +1,11 @@
 import React from "react";
 import { render } from "react-dom";
 import { Provider } from "react-redux";
-import { BrowserRouter as Router, Link, Route } from "react-router-dom";
+import { BrowserRouter as Router, Link, Switch } from "react-router-dom";
 import "semantic-ui-css/semantic.min.css";
 import { Container, Menu } from "semantic-ui-react";
-import Dashboard from "./pages/dashboard";
 import store from "./store";
+import SubPage from "./sub_page";
 
 class Application extends React.Component {
 	public render() {
@@ -19,7 +19,9 @@ class Application extends React.Component {
 					</Container>
 				</Menu>
 				<Container style={{ marginTop: "5em" }}>
-					<Route exact path="/" component={Dashboard} />
+					<Switch>
+						<SubPage exact path="/" loader={() => import("./pages/dashboard")}/>
+					</Switch>
 				</Container>
 			</div>
 		</Router>;
