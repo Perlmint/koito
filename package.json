@@ -42,6 +42,7 @@
 		"webpack-dev-server": "^3.1.14"
 	},
 	"dependencies": {
+		"currency-codes": "^1.5.0",
 		"dexie": "^2.0.4",
 		"immutability-helper": "^2.9.0",
 		"lodash": "^4.17.11",

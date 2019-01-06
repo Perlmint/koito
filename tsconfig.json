@@ -31,7 +31,7 @@
 		// "baseUrl": "./",
 		// "paths": {},
 		// "rootDirs": [],
-		// "typeRoots": [],
+		"typeRoots": ["./node_modules/@types", "./types"],
 		// "types": [],
 		"allowSyntheticDefaultImports": true,
 		"esModuleInterop": true,
