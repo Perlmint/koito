@@ -21,6 +21,7 @@ class Application extends React.Component {
 				<Container style={{ marginTop: "5em" }}>
 					<Switch>
 						<SubPage exact path="/" loader={() => import("./pages/dashboard")}/>
+						<SubPage path="/account" loader={() => import("./pages/account")}/>
 					</Switch>
 				</Container>
 			</div>
