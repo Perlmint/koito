@@ -1,9 +1,20 @@
 import { applyMiddleware, combineReducers, createStore } from "redux";
-import thunk from "redux-thunk";
-import accountReducer from "./account";
+import thunk, { ThunkMiddleware } from "redux-thunk";
+import accountReducer, { IAccount, LoadAccounts } from "./account";
 
-const store = createStore(combineReducers({
+export interface IRootState {
+	accounts: IAccount[];
+}
+
+const store = createStore(combineReducers<IRootState>({
 	accounts: accountReducer,
-}), applyMiddleware(thunk));
+}), applyMiddleware(
+	thunk as ThunkMiddleware<IRootState> ,
+));
+
+export type Dispatch = (typeof store)["dispatch"];
 
 export default store;
+
+// Initialize store
+store.dispatch(LoadAccounts());
